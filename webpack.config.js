@@ -19,7 +19,7 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/,
+        test: /\.css$/i,
         use: [
           'style-loader',
           'css-loader',
@@ -36,10 +36,11 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
   devServer: {
+    historyApiFallback: true,
     static: {
       directory: path.join(__dirname, 'dist'),
     },
     compress: true,
-    port: 9000,
+    port: 9001,
   },
 };
